@@ -6,12 +6,12 @@ Team Name: 	Fearless Warriors
 
 Members:
 
- Alaniz Ochoa, Fernando (fernie5a1a@gmail.com) 
+Fernando Alaniz Ochoa (fernie5a1a@gmail.com) 
 
-Fajardo, Eber (Diazeber@yahoo.com) 
+Eber Diaz Fajardo (Diazeber@yahoo.com) 
 
-Gandhi, Siddhi (Gandhisiddhi001@gmail.com) 
+Siddhi Gandhi (Gandhisiddhi001@gmail.com) 
 
-Zehtabian, Mohammadali (ramsin2727@gmail.com) Contact Person 
+Mohammadali Zehtabian (ramsin2727@gmail.com) Contact Person 
 
-Phan, Andy (andy.p.phan@gmail.com) 
+Andy Phan (andy.p.phan@gmail.com) 
