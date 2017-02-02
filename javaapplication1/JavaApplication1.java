@@ -62,8 +62,8 @@ public class JavaApplication1 {
   
     public static void main(String[] args) {
 
-        int menuOption = 0, destinationChoice = 0, departureChoice = 0, id = 1;
-        int amount = 0, num = 0, test = 0;
+        int menuChoice = 0, destinationChoice, departureChoice, id;
+        int amount, num, test;
         char check; 
         
         LinkedList List = new LinkedList();
@@ -72,7 +72,7 @@ public class JavaApplication1 {
         DepartureChoice depChoice = new DepartureChoice();
         Cancel can = new Cancel();
         while (menuOption != 3)
-        { 
+        { 	
             menuOption=menu();
 	
             switch (menuOption)
