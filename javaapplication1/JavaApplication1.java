@@ -15,24 +15,24 @@ import java.util.*;
  * @author Siddhi
  */
 public class JavaApplication1 {
-
+     // creates scanner method to obtain input form the command window - display
     public static Scanner kbd = new Scanner(System.in);
     
-    public static int menu()
+    public static int menu() // public static method declared
     {
         int menuChoice;
         do
         { 
             System.out.print("\nPlease Choose From the Following Options:"
                     + "\n 1. Search/Purchase Ticket \n 2. Cancel Existing Ticket"
-                    + "\n 3. Exit\n\n");
+                    + "\n 3. Exit\n\n");  // asks user for input
 
 	    System.out.println("Select Option: ");
 
             menuChoice = kbd.nextInt();
 
             if (menuChoice < 1 || menuChoice > 3){
-                System.out.println("Error!");
+                System.out.println("Error!"); // message displayed to user 
             }
 
         }while (menuChoice < 1 || menuChoice > 3);
@@ -49,14 +49,14 @@ public class JavaApplication1 {
 			System.out.print("\nPlease Choose From the Following Options:"
 					+ "\n 1. London, England  \n 2. Rome, Italy"
 					+ "\n 3. Tokyo, Japan \n 4. Rio de Janeiro, Brazil"
-					+ "\n 5. Sydney, Australia\n\n");
+					+ "\n 5. Sydney, Australia\n\n"); //Users have options of different cities on can travel to
 					
-			System.out.println("Select Option: ");		
+			System.out.println("Select Option: ");	// user input required	
 			
 			destinationChoice = kbd.nextInt();
 			
 			if (destinationChoice < 1 || destinationChoice > 5){
-				System.out.println("Error!");
+				System.out.println("Error!"); // displays error message
 			}
 		} while (destinationChoice < 1 || destinationChoice > 5);
 		
@@ -84,9 +84,9 @@ public class JavaApplication1 {
                     destinationChoice=displayDestination();   
                     departureChoice = Dep.displayDeparture(destinationChoice);
                     depChoice.displayInfo(destinationChoice,departureChoice);
-                    System.out.println("Do you wish to Purchse ticket? (y/n) ");
+                    System.out.println("Do you wish to Purchse ticket? (y/n) "); // user asked if they want a ticket
                     check = kbd.next().charAt(0);
-                    if (check == 'Y' || check == 'y')
+                    if (check == 'Y' || check == 'y') // select yes
                     {
                         id = can.displayUserId();
                         amount = can.displayPurchase();
@@ -96,10 +96,10 @@ public class JavaApplication1 {
                              List.add(id);
                         }
                     }
-                    else if (check == 'N' || check == 'n')
+                    else if (check == 'N' || check == 'n') // select no
                     {
                          System.out.println("\nThank you for Using The Travel Agency Automation System. Have a Nice Day!");
-                         System.exit(0);
+                         System.exit(0); // exits after message displayed
                     }
                     else
                     {
