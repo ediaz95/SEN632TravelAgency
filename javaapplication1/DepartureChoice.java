@@ -8,6 +8,9 @@ package javaapplication1;
 /**
  *
  * @author APhan91
+ * @author Eber
+ * @author Fernando
+ * @author Siddhi
  */
 public class DepartureChoice
 {
