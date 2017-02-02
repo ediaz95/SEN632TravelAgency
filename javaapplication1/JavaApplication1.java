@@ -4,9 +4,6 @@
  * and open the template in the editor.
  */
 package javaapplication1;
-import javaapplication1.Departure;
-import javaapplication1.DepartureChoice;
-import javaapplication1.Cancel;
 
 import java.util.LinkedList;
 import java.util.*;
