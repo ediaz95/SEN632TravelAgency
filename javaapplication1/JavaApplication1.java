@@ -10,6 +10,9 @@ import java.util.*;
 /**
  *
  * @author APhan91
+ * @author Eber
+ * @author Fernando
+ * @author Siddhi
  */
 public class JavaApplication1 {
 
