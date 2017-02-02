@@ -8,6 +8,9 @@ import java.util.Scanner;
 /**
  *
  * @author APhan91
+ * @author Eber
+ * @author Fernando
+ * @author Siddhi
  */
 public class Cancel 
 {
