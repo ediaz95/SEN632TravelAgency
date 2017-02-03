@@ -53,7 +53,6 @@ public class Cancel
                 else
                 {
                     System.out.println("\nError! You do not have sufficient amount!");
-                    num = 1;
                 }
             }
             else if (y == 2)
