@@ -14,6 +14,7 @@ import java.util.Scanner;
  */
 public class Cancel 
 {
+    // creates scanner method to obtain input from the command window - display
     public static Scanner kbd = new Scanner(System.in);
     
     public int userID;
@@ -24,21 +25,21 @@ public class Cancel
     {
         System.out.println("Please enter a number for a User ID: ");
         
-        userID = kbd.nextInt();
+        userID = kbd.nextInt(); // retrieve and stores user's input 
         
-        return userID;
+        return userID; // returns int value of variable userID when method is called
     }
     
     public int displayPurchase()
     {
         System.out.println("Please enter an amount: ");
         
-        amount = kbd.nextInt();
+        amount = kbd.nextInt(); // retrieve and stores user's input 
         
-        return amount;
+        return amount; // returns int value of variable userID when method is called
     }
 
-    public int checkAmount(int x, int y, int z)
+    public int checkAmount(int x, int y, int z) // retrieve and store passed values from another class
     {
         if (x == 1)
         {
@@ -320,7 +321,7 @@ public class Cancel
         {
             System.out.println("\nError!");
         }
-        return num; 
+        return num; // return integer value when method is called
     }
 }
 
