@@ -13,11 +13,12 @@ import java.util.Scanner;
  * @author Siddhi
  */
 public class Departure {
+    // creates scanner method to obtain input from the command window - display
     public static Scanner kbd = new Scanner(System.in);
     
     public int depChoice;
 
-    public int displayDeparture(int x)
+    public int displayDeparture(int x) // retrieve and store value passed from class javaapplication1
     {
         do
         {
@@ -33,7 +34,7 @@ public class Departure {
 
                     System.out.println("Select option: ");
 
-                    depChoice = kbd.nextInt();					
+                    depChoice = kbd.nextInt(); // retrieve and store user input 				
             }
             else if (x == 2)
             {
@@ -47,7 +48,7 @@ public class Departure {
 
                     System.out.println("Select option: ");
 
-                    depChoice = kbd.nextInt();
+                    depChoice = kbd.nextInt(); // retrieve and store user input 
 
                     if (depChoice < 1 || depChoice > 4){
                             System.out.println("\nError!");
@@ -65,7 +66,7 @@ public class Departure {
 
                     System.out.println("Select option: ");
 
-                    depChoice = kbd.nextInt();
+                    depChoice = kbd.nextInt(); // retrieve and store user input 
 
                     if (depChoice < 1 || depChoice > 4){
                             System.out.println("\nError!");
@@ -83,7 +84,7 @@ public class Departure {
 
                     System.out.println("Select option: ");
 
-                    depChoice = kbd.nextInt();
+                    depChoice = kbd.nextInt(); // retrieve and store user input 
 
                     if (depChoice < 1 || depChoice > 4){
                             System.out.println("\nError!");
@@ -101,7 +102,7 @@ public class Departure {
 
                     System.out.println("Select option: ");
 
-                    depChoice = kbd.nextInt();
+                    depChoice = kbd.nextInt(); // retrieve and store user input 
 
                     if (depChoice < 1 || depChoice > 4)
                     {
@@ -113,7 +114,7 @@ public class Departure {
                     System.out.println("\nError!");
             }
         } while (depChoice < 1 || depChoice > 5);
-        return depChoice;
+        return depChoice; // return integer value in variable depChoice when method is called by another class
     }
 }
 
