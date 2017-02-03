@@ -14,13 +14,13 @@ import java.util.*;
  * @author Fernando
  * @author Siddhi
  */
-public class JavaApplication1 {
+public class JavaApplication1 { //class declaration
      // creates scanner method to obtain input form the command window - display
     public static Scanner kbd = new Scanner(System.in);
     
     public static int menu() // public static method declared
     {
-        int menuChoice;
+        int menuChoice; 
         do
         { 
             System.out.print("\nPlease Choose From the Following Options:"
