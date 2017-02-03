@@ -15,7 +15,7 @@ import java.util.*;
  * @author Siddhi
  */
 public class JavaApplication1 { //class declaration
-     // creates scanner method to obtain input form the command window - display
+     // creates scanner method to obtain input from the command window - display
     public static Scanner kbd = new Scanner(System.in);
     
     public static int menu() // public static method declared
@@ -25,11 +25,11 @@ public class JavaApplication1 { //class declaration
         { 
             System.out.print("\nPlease Choose From the Following Options:"
                     + "\n 1. Search/Purchase Ticket \n 2. Cancel Existing Ticket"
-                    + "\n 3. Exit\n\n");  // asks user for input
+                    + "\n 3. Exit\n\n");  
 
-	    System.out.println("Select Option: ");
+	    System.out.println("Select Option: "); // asks user for input
 
-            menuChoice = kbd.nextInt();
+            menuChoice = kbd.nextInt(); // gets user's input and store into integer variable menuChoice
 
             if (menuChoice < 1 || menuChoice > 3){
                 System.out.println("Error!"); // message displayed to user 
@@ -37,7 +37,7 @@ public class JavaApplication1 { //class declaration
 
         }while (menuChoice < 1 || menuChoice > 3);
 
-        return menuChoice;
+        return menuChoice; //returns value of menuChoice when called
     }
     
     public static int displayDestination()
@@ -51,16 +51,16 @@ public class JavaApplication1 { //class declaration
 					+ "\n 3. Tokyo, Japan \n 4. Rio de Janeiro, Brazil"
 					+ "\n 5. Sydney, Australia\n\n"); //Users have options of different cities on can travel to
 					
-			System.out.println("Select Option: ");	// user input required	
+			System.out.println("Select Option: ");	
 			
-			destinationChoice = kbd.nextInt();
+			destinationChoice = kbd.nextInt(); // get user's input and store in integer value destinationChoice	
 			
 			if (destinationChoice < 1 || destinationChoice > 5){
 				System.out.println("Error!"); // displays error message
 			}
 		} while (destinationChoice < 1 || destinationChoice > 5);
 		
-		return destinationChoice;
+		return destinationChoice; //returns value of menuChoice when called
     }
   
     public static void main(String[] args) {
@@ -69,11 +69,11 @@ public class JavaApplication1 { //class declaration
         int amount, num, test;
         char check; 
         
-        LinkedList List = new LinkedList();
-        
-        Departure Dep = new Departure();
-        DepartureChoice depChoice = new DepartureChoice();
-        Cancel can = new Cancel();
+        LinkedList List = new LinkedList(); // declaring a class 
+        Departure Dep = new Departure(); // declaring a class
+        DepartureChoice depChoice = new DepartureChoice(); // declaring a class
+        Cancel can = new Cancel(); // declaring a class
+	    
         while (menuOption != 3)
         { 	
             menuOption=menu();
@@ -85,42 +85,42 @@ public class JavaApplication1 { //class declaration
                     departureChoice = Dep.displayDeparture(destinationChoice);
                     depChoice.displayInfo(destinationChoice,departureChoice);
                     System.out.println("Do you wish to Purchse ticket? (y/n) "); // user asked if they want a ticket
-                    check = kbd.next().charAt(0);
+                    check = kbd.next().charAt(0); // get user's input and store the character into a char variable check
                     if (check == 'Y' || check == 'y') // select yes
                     {
-                        id = can.displayUserId();
-                        amount = can.displayPurchase();
-                        test = can.checkAmount(destinationChoice,departureChoice,amount);   
+                        id = can.displayUserId(); // call, retrieve, and store the value from method displayUserId in class Cancel
+                        amount = can.displayPurchase(); // call, retrieve, and store the value from method displayUserId in class Cancel
+                        test = can.checkAmount(destinationChoice,departureChoice,amount); // call, pass values to method checkAmount; then retrieve and store value into integer variable test   
                         if (test == 1)  
                         {
-                             List.add(id);
+                             List.add(id); // add value of integer id to linked list
                         }
                     }
                     else if (check == 'N' || check == 'n') // select no
                     {
                          System.out.println("\nThank you for Using The Travel Agency Automation System. Have a Nice Day!");
-                         System.exit(0); // exits after message displayed
+                         System.exit(0); // exits program after message displayed
                     }
                     else
                     {
-                         System.out.println("Error!");
+                         System.out.println("Error!"); // display message to user
                     }                        
                     break;
                 case 2:
-                    id = can.displayUserId(); 
-                    System.out.println("\nUserID exist in Database: "+List.contains(id)); 
+                    id = can.displayUserId(); // call, retrieve, and store the value from method displayUserId in class Cancel
+                    System.out.println("\nUserID exist in Database: "+List.contains(id)); // checks if variable id is in linked list then print message and boolean value true/false
                     if (List.contains(id) == false)
                     {
                         System.out.println("\nThe UserID doesn't exist in our Database.");
                     }    
                     else
                     {
-                        System.out.println("Do you wish to cancel ticket? (y/n) ");
-                        check = kbd.next().charAt(0);
+                        System.out.println("Do you wish to cancel ticket? (y/n) "); // user asked if they want to cancel
+                        check = kbd.next().charAt(0); // get user's input and store the character into a char variable check
                         if (check == 'Y' || check == 'y')
                         {
-                            List.remove(List.indexOf(id)); 
-                            if (List.indexOf(id) == -1)
+                            List.remove(List.indexOf(id)); // locates and return position of the id value in the linked list; then removes that value/position from linked list
+                            if (List.indexOf(id) == -1) // check if the id value exist in the linked list; if the return is -1 then does not exist
                             {
                                System.out.println("\nWe have cancelled your ticket. You will receive a full refund.");
                             } 
@@ -138,7 +138,7 @@ public class JavaApplication1 { //class declaration
                     break;
                 case 3:
                     System.out.print("\nThank For Using The Travel Agency Automation System. Have a Nice Day. Good-Bye!");
-                    System.exit(0);
+                    System.exit(0); // exits program after message displayed
                     break;
             }
         }
