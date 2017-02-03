@@ -14,7 +14,7 @@ package javaapplication1;
  */
 public class DepartureChoice
 {
-    public void displayInfo(int x, int y)
+    public void displayInfo(int x, int y) // retrieve and store passed values from class javaapplication1 
     {   
         if (x == 1)
         {
