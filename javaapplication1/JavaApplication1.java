@@ -99,7 +99,6 @@ public class JavaApplication1 { //class declaration
                     else if (check == 'N' || check == 'n') // select no
                     {
                          System.out.println("\nThank you for Using The Travel Agency Automation System. Have a Nice Day!");
-                         System.exit(0); // exits program after message displayed
                     }
                     else
                     {
